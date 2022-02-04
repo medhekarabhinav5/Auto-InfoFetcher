@@ -68,6 +68,7 @@ link_info_list = []
 users_list = []
 logging.debug('News List generated.')
 LinkCollectionStatus = True
+falseLinkCount = 0
 vehicleCount = 1
 upcoming_link_respose = True
 #current_date = str(date.today())
@@ -93,30 +94,34 @@ if linkRequest.status_code == 200: # if  status of url is 200 then it will proce
         logging.info(f'Number of Total Vehicles : {totalCount}')
                
     while upcoming_link_respose: 
-        if vehicleCount % 10 == 0: 
-            logging.debug('Program reached end on page, Scrolling down for more.')
-            driver.find_element_by_tag_name('body').send_keys(Keys.END)
-            time.sleep(4)
-            logging.debug('letting Thread sleep for 4 seconds, for better loading of page.')
-            """
-                        //*[@id="rf01"]/div[1]/div/main/div/div[1]/div[2]/div[1]/div[2]/section/div[1]/div[2]/h3/a
-                        //*[@id="rf01"]/div[1]/div/main/div/div[1]/div[2]/div[1]/div[3]/section/div[1]/div[2]/h3/a
-                        //*[@id="rf01"]/div[1]/div/main/div/div[1]/div[2]/div[1]/div[7]/section/div[1]/div[2]/h3/a
-                        //*[@id="rf01"]/div[1]/div/main/div/div[1]/div[2]/div[1]/div[8]/section/div[1]/div[2]/h3/a
-                        //*[@id="rf01"]/div[1]/div/main/div/div[1]/div[2]/div[1]/div[17]/section/div[1]/div[2]/h3/a
-                        //*[@id="rf01"]/div[1]/div/main/div/div[1]/div[2]/div[1]/div[20]/section/div[1]/div[2]/h3/a
-                        //*[@id="rf01"]/div[1]/div/main/div/div[1]/div[2]/div[1]/div[46]/section/div[1]/div[2]/h3/a
-            """
-        link_xpath = f'//*[@id="rf01"]/div[1]/div/main/div/div[1]/div[2]/div[1]/div[{vehicleCount}]/section/div[1]/div[2]/h3/a'
-        logging.debug(f'link Xpath : {link_xpath}.')
-        link_response = check_exists_by_xpath(link_xpath)
-        if link_response == True:
-            logging.debug("Responses to link returned True. Going Forward.")
-            link_element = driver.find_element_by_xpath(link_xpath)
-            link = link_element.get_attribute('href')
-            logging.debug(f'Link from elements : {link}')
-            link_text = link_element.text
-            logging.debug(f'Link text from elements : {link_text}')      
+        if falseLinkCount < 10:
+            if vehicleCount % 10 == 0:
+                falseLinkCount = 0 
+                logging.debug('Program reached end on page, Scrolling down for more.')
+                driver.find_element_by_tag_name('body').send_keys(Keys.END)
+                time.sleep(4)
+                logging.debug('letting Thread sleep for 4 seconds, for better loading of page.')
+                """
+                            //*[@id="rf01"]/div[1]/div/main/div/div[1]/div[2]/div[1]/div[2]/section/div[1]/div[2]/h3/a
+                            //*[@id="rf01"]/div[1]/div/main/div/div[1]/div[2]/div[1]/div[3]/section/div[1]/div[2]/h3/a
+                """
+            link_xpath = f'//*[@id="rf01"]/div[1]/div/main/div/div[1]/div[2]/div[1]/div[{str(vehicleCount)}]/section/div[1]/div[2]/h3/a'
+            logging.debug(f'link Xpath : {link_xpath}.')
+            link_response = check_exists_by_xpath(link_xpath)
+            if link_response == True:
+                logging.debug("Responses to link returned True. Going Forward.")
+                link_element = driver.find_element_by_xpath(link_xpath)
+                link = link_element.get_attribute('href')
+                logging.debug(f'Link from elements : {link}')
+                link_info_list.append(link)    
+                vehicleCount += 1
+            else:
+                logging.debug(f'Responses to Link is not True. Link Response : {link_response}')
+                falseLinkCount += 1
+                vehicleCount += 1
         else:
+            logging.debug("False link count exceeds 10")
             upcoming_link_respose = False
-            logging.debug(f'Responses to Link is not True. Link Response : {link_response}')
+print(link_info_list)
+print(len(link_info_list))
+                
