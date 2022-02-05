@@ -65,6 +65,9 @@ def check_exists_by_xpath(xpath): # Checking whether xpath is available
     return True
     
 link_info_list = []
+link_info_list_used = []
+variant_link_list = []
+variant_link_list_used = []
 users_list = []
 logging.debug('News List generated.')
 LinkCollectionStatus = True
@@ -122,6 +125,14 @@ if linkRequest.status_code == 200: # if  status of url is 200 then it will proce
         else:
             logging.debug("False link count exceeds 10")
             upcoming_link_respose = False
+            driver.close()
 print(link_info_list)
 print(len(link_info_list))
-                
+
+# Variant XPath 
+# //*[@id="rf01"]/div[1]/div/nav/div[2]/div/ul/li[8]/a
+#logging.debug("Getting Variants link from link list")
+
+#for link in link_info_list:
+#    L
+
