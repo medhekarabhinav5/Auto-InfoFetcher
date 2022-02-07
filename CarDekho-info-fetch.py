@@ -66,8 +66,8 @@ def check_exists_by_xpath(xpath, xpathDriver): # Checking whether xpath is avail
     
 link_info_list = []
 link_info_list_used = []
-variant_link_list = []
-variant_link_list_used = []
+model_variant_link_list = []
+model_variant_link_list_used = []
 users_list = []
 logging.debug('News List generated.')
 LinkCollectionStatus = True
@@ -131,43 +131,44 @@ print(len(link_info_list))
 
 logging.debug("Getting Variants link from link list")
 logging.debug("Initializing driver for Variants")
-variantDriver = webdriver.Chrome(
+modelDriver = webdriver.Chrome(
 executable_path = CHROMEDRIVER_PATH,
     chrome_options = chrome_options
 )
 logging.debug("Initializing ChromeDriver")
 
 for link in link_info_list:
-    variant_url = link
-    link_info_list_used.append(link)
+    model_url = link
+    link_info_list_used.append(model_url)
     headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
-    logging.debug(f'Setting up url for variant: {variant_url}.')
-    logging.debug(f"setting up header for variant: {headers}")
-    variantlinkRequest = requests.get(variant_url, headers=headers)
+    logging.debug(f'Setting up url for Model: {model_url}.')
+    logging.debug(f"setting up header for Model: {headers}")
+    modelLinkRequest = requests.get(model_url, headers=headers)
     logging.debug('Getting url info.')
-    logging.debug(f"checking whether url {variant_url} exists")
-    logging.debug(f"{variantlinkRequest.status_code}")
-    if variantlinkRequest.status_code == 200: # if  status of url is 200 then it will proceed.
-        logging.debug(f"Successfully get 200 status for link : {variant_url}")
-        variantDriver.get(variant_url)
+    logging.debug(f"checking whether url {model_url} exists")
+    logging.debug(f"{modelLinkRequest.status_code}")
+    if modelLinkRequest.status_code == 200: # if  status of url is 200 then it will proceed.
+        logging.debug(f"Successfully get 200 status for link : {model_url}")
+        modelDriver.get(model_url)
         for tabNum in range(12):
-            variantXpath = f'//*[@id="rf01"]/div[1]/div/nav/div[2]/div/ul/li[{tabNum}]/a'
-            logging.debug(f"Variant Xpath : {variantXpath}")
-            variantXpath_response = check_exists_by_xpath(variantXpath, variantDriver)
-            logging.debug(f"variant Xpath response : {variantXpath_response}")
-            if variantXpath_response:
-                variantXpath_element = variantDriver.find_element_by_xpath(variantXpath)
-                variant_link_text = variantXpath_element.text
-                variant_link = variantXpath_element.get_attribute("href")
-                if variant_link_text == "VARIANTS":
-                    variant_link_list.append(variant_link)
-                    logging.info(f'Variant Link : {variant_link}')
+            modelXpath = f'//*[@id="rf01"]/div[1]/div/nav/div[2]/div/ul/li[{tabNum}]/a'
+            logging.debug(f"Model Xpath : {modelXpath}")
+            modelXpath_response = check_exists_by_xpath(modelXpath, modelDriver)
+            logging.debug(f"Model Xpath response : {modelXpath_response}")
+            if modelXpath_response:
+                model_variantXpath_element = modelDriver.find_element_by_xpath(modelXpath)
+                model_variant_link_text = model_variantXpath_element.text
+                modelVariant_link = model_variantXpath_element.get_attribute("href")
+                if model_variant_link_text == "VARIANTS":
+                    model_variant_link_list.append(modelVariant_link)
+                    logging.debug(f'Model Variant Link : {modelVariant_link}')
+                    
                 else:
                     continue
         else:
             continue
 else:
-    variantDriver.close()
+    modelDriver.close()
 
-print(variant_link_list)
-print(len(variant_link_list))
+print(model_variant_link_list)
+print(len(model_variant_link_list))
