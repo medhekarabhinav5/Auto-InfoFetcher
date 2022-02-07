@@ -2,7 +2,7 @@
 # Getting Car news from web
 # Decide website to be fetched from
 import logging
-logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logging.debug("Start of Program.")
 
 import pathlib
@@ -54,10 +54,10 @@ executable_path = CHROMEDRIVER_PATH,
 )
 logging.debug("Initializing ChromeDriver")
 
-def check_exists_by_xpath(xpath): # Checking whether xpath is available
+def check_exists_by_xpath(xpath, xpathDriver): # Checking whether xpath is available
     try:
 
-        driver.find_element_by_xpath(xpath)
+        xpathDriver.find_element_by_xpath(xpath)
         logging.debug(f"Checked Xpath : {xpath}")
     except:
         logging.debug(f"Checked path {xpath} does not exists")
@@ -90,7 +90,7 @@ if linkRequest.status_code == 200: # if  status of url is 200 then it will proce
     logging.debug(f"Successfully get 200 status for link : {url}")
     driver.get(url)
     totalCountXpath = '//*[@id="rf01"]/div[1]/div/main/div/div[1]/div[1]/div[1]/span'
-    totalCountXpath_response = check_exists_by_xpath(totalCountXpath)
+    totalCountXpath_response = check_exists_by_xpath(totalCountXpath, driver)
     if totalCountXpath_response:
         totalCountXpath_element = driver.find_element_by_xpath(totalCountXpath)
         totalCount = totalCountXpath_element.text
@@ -110,12 +110,12 @@ if linkRequest.status_code == 200: # if  status of url is 200 then it will proce
                 """
             link_xpath = f'//*[@id="rf01"]/div[1]/div/main/div/div[1]/div[2]/div[1]/div[{str(vehicleCount)}]/section/div[1]/div[2]/h3/a'
             logging.debug(f'link Xpath : {link_xpath}.')
-            link_response = check_exists_by_xpath(link_xpath)
+            link_response = check_exists_by_xpath(link_xpath, driver)
             if link_response == True:
                 logging.debug("Responses to link returned True. Going Forward.")
                 link_element = driver.find_element_by_xpath(link_xpath)
                 link = link_element.get_attribute('href')
-                logging.debug(f'Link from elements : {link}')
+                logging.info(f'Link from elements : {link}')
                 link_info_list.append(link)    
                 vehicleCount += 1
             else:
@@ -129,10 +129,38 @@ if linkRequest.status_code == 200: # if  status of url is 200 then it will proce
 print(link_info_list)
 print(len(link_info_list))
 
-# Variant XPath 
-# //*[@id="rf01"]/div[1]/div/nav/div[2]/div/ul/li[8]/a
-#logging.debug("Getting Variants link from link list")
+logging.debug("Getting Variants link from link list")
+logging.debug("Initializing driver for Variants")
+variantDriver = webdriver.Chrome(
+executable_path = CHROMEDRIVER_PATH,
+    chrome_options = chrome_options
+)
+logging.debug("Initializing ChromeDriver")
 
-#for link in link_info_list:
-#    L
+for link in link_info_list:
+    variant_url = link
+    link_info_list_used.append(link)
+    headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
+    logging.debug(f'Setting up url for variant: {variant_url}.')
+    logging.debug(f"setting up header for variant: {headers}")
+    variantlinkRequest = requests.get(variant_url, headers=headers)
+    logging.debug('Getting url info.')
+    logging.debug(f"checking whether url {variant_url} exists")
+    logging.debug(f"{variantlinkRequest.status_code}")
+    if variantlinkRequest.status_code == 200: # if  status of url is 200 then it will proceed.
+        logging.debug(f"Successfully get 200 status for link : {variant_url}")
+        variantDriver.get(variant_url)
+        variantXpath = '//*[@id="rf01"]/div[1]/div/nav/div[2]/div/ul/li[8]/a'
+        variantXpath_response = check_exists_by_xpath(variantXpath, variantDriver)
+        if variantXpath_response:
+            variantXpath_element = variantDriver.find_element_by_xpath(variantXpath)
+            variant_link = variantXpath_element.get_attribute("href")
+            variant_link_list.append(variant_link)
+            logging.info(f'Variant Link : {variant_link}')
+    else:
+        continue
+else:
+    variantDriver.close()
 
+print(variant_link_list)
+print(len(variant_link_list))
