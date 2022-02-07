@@ -140,7 +140,6 @@ logging.debug("Initializing ChromeDriver")
 for link in link_info_list:
     model_url = link
     link_info_list_used.append(model_url)
-    headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
     logging.debug(f'Setting up url for Model: {model_url}.')
     logging.debug(f"setting up header for Model: {headers}")
     modelLinkRequest = requests.get(model_url, headers=headers)
@@ -160,9 +159,12 @@ for link in link_info_list:
                 model_variant_link_text = model_variantXpath_element.text
                 modelVariant_link = model_variantXpath_element.get_attribute("href")
                 if model_variant_link_text == "VARIANTS":
-                    model_variant_link_list.append(modelVariant_link)
-                    logging.debug(f'Model Variant Link : {modelVariant_link}')
-                    
+                    logging.debug(f"checking link {modelVariant_link}'s status code")
+                    variantLinkRequest = requests.get(modelVariant_link, headers=headers)
+                    logging.debug(f"Status Code : {variantLinkRequest.status_code}")
+                    if variantLinkRequest.status_code == 200:
+                        model_variant_link_list.append(modelVariant_link)
+                        logging.debug(f'Model Variant Link : {modelVariant_link}')                    
                 else:
                     continue
         else:
