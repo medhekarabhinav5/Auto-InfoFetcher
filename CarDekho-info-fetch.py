@@ -2,7 +2,7 @@
 # Getting Car news from web
 # Decide website to be fetched from
 import logging
-logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logging.debug("Start of Program.")
 
 import pathlib
@@ -54,10 +54,10 @@ executable_path = CHROMEDRIVER_PATH,
 )
 logging.debug("Initializing ChromeDriver")
 
-def check_exists_by_xpath(xpath): # Checking whether xpath is available
+def check_exists_by_xpath(xpath, xpathDriver): # Checking whether xpath is available
     try:
 
-        driver.find_element_by_xpath(xpath)
+        xpathDriver.find_element_by_xpath(xpath)
         logging.debug(f"Checked Xpath : {xpath}")
     except:
         logging.debug(f"Checked path {xpath} does not exists")
@@ -65,6 +65,9 @@ def check_exists_by_xpath(xpath): # Checking whether xpath is available
     return True
     
 link_info_list = []
+link_info_list_used = []
+model_variant_link_list = []
+model_variant_link_list_used = []
 users_list = []
 logging.debug('News List generated.')
 LinkCollectionStatus = True
@@ -87,7 +90,7 @@ if linkRequest.status_code == 200: # if  status of url is 200 then it will proce
     logging.debug(f"Successfully get 200 status for link : {url}")
     driver.get(url)
     totalCountXpath = '//*[@id="rf01"]/div[1]/div/main/div/div[1]/div[1]/div[1]/span'
-    totalCountXpath_response = check_exists_by_xpath(totalCountXpath)
+    totalCountXpath_response = check_exists_by_xpath(totalCountXpath, driver)
     if totalCountXpath_response:
         totalCountXpath_element = driver.find_element_by_xpath(totalCountXpath)
         totalCount = totalCountXpath_element.text
@@ -107,12 +110,12 @@ if linkRequest.status_code == 200: # if  status of url is 200 then it will proce
                 """
             link_xpath = f'//*[@id="rf01"]/div[1]/div/main/div/div[1]/div[2]/div[1]/div[{str(vehicleCount)}]/section/div[1]/div[2]/h3/a'
             logging.debug(f'link Xpath : {link_xpath}.')
-            link_response = check_exists_by_xpath(link_xpath)
+            link_response = check_exists_by_xpath(link_xpath, driver)
             if link_response == True:
                 logging.debug("Responses to link returned True. Going Forward.")
                 link_element = driver.find_element_by_xpath(link_xpath)
                 link = link_element.get_attribute('href')
-                logging.debug(f'Link from elements : {link}')
+                logging.info(f'Link from elements : {link}')
                 link_info_list.append(link)    
                 vehicleCount += 1
             else:
@@ -122,6 +125,52 @@ if linkRequest.status_code == 200: # if  status of url is 200 then it will proce
         else:
             logging.debug("False link count exceeds 10")
             upcoming_link_respose = False
+            driver.close()
 print(link_info_list)
 print(len(link_info_list))
-                
+
+logging.debug("Getting Variants link from link list")
+logging.debug("Initializing driver for Variants")
+modelDriver = webdriver.Chrome(
+executable_path = CHROMEDRIVER_PATH,
+    chrome_options = chrome_options
+)
+logging.debug("Initializing ChromeDriver")
+
+for link in link_info_list:
+    model_url = link
+    link_info_list_used.append(model_url)
+    logging.debug(f'Setting up url for Model: {model_url}.')
+    logging.debug(f"setting up header for Model: {headers}")
+    modelLinkRequest = requests.get(model_url, headers=headers)
+    logging.debug('Getting url info.')
+    logging.debug(f"checking whether url {model_url} exists")
+    logging.debug(f"{modelLinkRequest.status_code}")
+    if modelLinkRequest.status_code == 200: # if  status of url is 200 then it will proceed.
+        logging.debug(f"Successfully get 200 status for link : {model_url}")
+        modelDriver.get(model_url)
+        for tabNum in range(12):
+            modelXpath = f'//*[@id="rf01"]/div[1]/div/nav/div[2]/div/ul/li[{tabNum}]/a'
+            logging.debug(f"Model Xpath : {modelXpath}")
+            modelXpath_response = check_exists_by_xpath(modelXpath, modelDriver)
+            logging.debug(f"Model Xpath response : {modelXpath_response}")
+            if modelXpath_response:
+                model_variantXpath_element = modelDriver.find_element_by_xpath(modelXpath)
+                model_variant_link_text = model_variantXpath_element.text
+                modelVariant_link = model_variantXpath_element.get_attribute("href")
+                if model_variant_link_text == "VARIANTS":
+                    logging.debug(f"checking link {modelVariant_link}'s status code")
+                    variantLinkRequest = requests.get(modelVariant_link, headers=headers)
+                    logging.debug(f"Status Code : {variantLinkRequest.status_code}")
+                    if variantLinkRequest.status_code == 200:
+                        model_variant_link_list.append(modelVariant_link)
+                        logging.debug(f'Model Variant Link : {modelVariant_link}')                    
+                else:
+                    continue
+        else:
+            continue
+else:
+    modelDriver.close()
+
+print(model_variant_link_list)
+print(len(model_variant_link_list))
