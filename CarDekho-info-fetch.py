@@ -150,15 +150,22 @@ for link in link_info_list:
     if variantlinkRequest.status_code == 200: # if  status of url is 200 then it will proceed.
         logging.debug(f"Successfully get 200 status for link : {variant_url}")
         variantDriver.get(variant_url)
-        variantXpath = '//*[@id="rf01"]/div[1]/div/nav/div[2]/div/ul/li[8]/a'
-        variantXpath_response = check_exists_by_xpath(variantXpath, variantDriver)
-        if variantXpath_response:
-            variantXpath_element = variantDriver.find_element_by_xpath(variantXpath)
-            variant_link = variantXpath_element.get_attribute("href")
-            variant_link_list.append(variant_link)
-            logging.info(f'Variant Link : {variant_link}')
-    else:
-        continue
+        for tabNum in range(12):
+            variantXpath = f'//*[@id="rf01"]/div[1]/div/nav/div[2]/div/ul/li[{tabNum}]/a'
+            logging.debug(f"Variant Xpath : {variantXpath}")
+            variantXpath_response = check_exists_by_xpath(variantXpath, variantDriver)
+            logging.debug(f"variant Xpath response : {variantXpath_response}")
+            if variantXpath_response:
+                variantXpath_element = variantDriver.find_element_by_xpath(variantXpath)
+                variant_link_text = variantXpath_element.text
+                variant_link = variantXpath_element.get_attribute("href")
+                if variant_link_text == "VARIANTS":
+                    variant_link_list.append(variant_link)
+                    logging.info(f'Variant Link : {variant_link}')
+                else:
+                    continue
+        else:
+            continue
 else:
     variantDriver.close()
 
