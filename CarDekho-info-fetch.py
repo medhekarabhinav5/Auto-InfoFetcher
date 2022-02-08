@@ -149,6 +149,12 @@ for link in link_info_list:
     if modelLinkRequest.status_code == 200: # if  status of url is 200 then it will proceed.
         logging.debug(f"Successfully get 200 status for link : {model_url}")
         modelDriver.get(model_url)
+        vehicleName_Xpath = '//*[@id="overview"]/div/div/div[2]/h1'
+        vehicleName_response = check_exists_by_xpath(vehicleName_Xpath, modelDriver)
+        if vehicleName_response:
+            vehicleName_element = modelDriver.find_element_by_xpath(vehicleName_Xpath)
+            vehicleName = vehicleName_element.text
+            logging.info(f'Vehicle Name : {vehicleName}')
         for tabNum in range(12):
             modelXpath = f'//*[@id="rf01"]/div[1]/div/nav/div[2]/div/ul/li[{tabNum}]/a'
             logging.debug(f"Model Xpath : {modelXpath}")
