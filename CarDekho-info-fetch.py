@@ -154,7 +154,13 @@ for link in link_info_list:
         if vehicleName_response:
             vehicleName_element = modelDriver.find_element_by_xpath(vehicleName_Xpath)
             vehicleName = vehicleName_element.text
+            splitz = model_url.split('/')
+            brand_name = splitz[-2].replace('_', ' ').replace('-', ' ').title()
+            model_name = splitz[-1].replace('_', ' ').replace('-', ' ').title()
             logging.info(f'Vehicle Name : {vehicleName}')
+            logging.info(f'Vehicle Name : {brand_name}')
+            logging.info(f'Vehicle Name : {model_name}')
+
         for tabNum in range(12):
             modelXpath = f'//*[@id="rf01"]/div[1]/div/nav/div[2]/div/ul/li[{tabNum}]/a'
             logging.debug(f"Model Xpath : {modelXpath}")
