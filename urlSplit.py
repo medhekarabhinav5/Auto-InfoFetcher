@@ -10,29 +10,35 @@ replacableItemsList = ['-','_','/',':',',']
 splitz = url.split('/')
 brand = splitz[-2].replace('_', ' ').replace('-', ' ').title().split(' ')
 model = splitz[-1].replace('_', ' ').replace('-', ' ').title().split(' ')
-#print(brand)
-#print(model)
-if brand in model:
+
+brand_list = brand
+model_list = model
+originalBrandModel = "Land Rover Range Rover".split(' ')
+originalmodel = [brand for brand in originalBrandModel if brand != brand_list[0]]
+originalBrand = [model for model in originalBrandModel if model != originalmodel[0]]
+
+print(originalmodel)
+print(originalBrand)
+
+'''if brand in model:
     #print("Exist")
     model = model.replace(brand, "").strip()
     #print(model)
-str = "Land Rover Range Rover".split(' ')
-#str = "Tata Safari".split(' ')
+#str = "Land Rover Range Rover".split(' ')
+originalBrandModel = "Tata Safari".split(' ')
 
-brand_set1 = set(brand)# Tata
-brand_set2 = set(str)# Tata Safari
+brand_set = set(brand)# Tata
+brand_list = list(brand_set)
+model_list = model
+originalBrandModel.remove(brand_list[0])
 
-brand_set2.intersection(brand_set1)
+if len(model) != len(originalBrandModel):
+    print(model)
+    print(originalBrandModel)
 
-model_set1 = set(model) # Tata New Safari
-model_set2 = set(str) # Tata Safari
-z = ' '.join(list(model_set2.symmetric_difference(model_set1)))
-brand_set1 = list(brand_set1)
-model_set1.remove(brand_set1[0])
-model_list = list(model_set1)
 
 final_model =  ' '.join(model_list)
-final_brand = ' '.join(brand_set1)
+final_brand = ' '.join(brand_set)
 
 print(final_brand)
-print(final_model)
+print(final_model)'''
