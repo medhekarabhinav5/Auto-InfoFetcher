@@ -1,24 +1,31 @@
-from sqlalchemy import intersect
-
+import re
 
 #url = "https://www.cardekho.com/carmodels/Maruti/Maruti_Vitara_Brezza"
 #url = "https://www.cardekho.com/mercedes-benz/amg-g-63"
-#url = "https://www.cardekho.com/carmodels/Tata/Tata_New_Safari"
-url = "https://www.cardekho.com/land-rover/range-rover"
+url = "https://www.cardekho.com/carmodels/Tata/Tata_New_Safari"
+#url = "https://www.cardekho.com/land-rover/range-rover"
 
 replacableItemsList = ['-','_','/',':',',']
 splitz = url.split('/')
-brand = splitz[-2].replace('_', ' ').replace('-', ' ').title().split(' ')
-model = splitz[-1].replace('_', ' ').replace('-', ' ').title().split(' ')
+brand = splitz[-2].replace('_', ' ').replace('-', ' ').title()
+model = splitz[-1].replace('_', ' ').replace('-', ' ').title()
+originalText = "Tata Safari"
 
-brand_list = brand
+if re.search(brand, model):
+    print(f"{brand} is present in {model}")
+    model = model.replace(brand, '').strip()
+else:
+    print(f"{brand} is not present in {model}")
+
+print(brand)
+print(model)
+
+'''brand_list = brand
 model_list = model
 originalBrandModel = "Land Rover Range Rover".split(' ')
 originalmodel = [brand for brand in originalBrandModel if brand != brand_list[0]]
-originalBrand = [model for model in originalBrandModel if model != originalmodel[0]]
+originalBrand = [model for model in originalBrandModel if model != originalmodel[0]]'''
 
-print(originalmodel)
-print(originalBrand)
 
 '''if brand in model:
     #print("Exist")
