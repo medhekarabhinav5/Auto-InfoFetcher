@@ -73,7 +73,7 @@ logging.debug('News List generated.')
 LinkCollectionStatus = True
 falseLinkCount = 0
 vehicleCount = 1
-upcoming_link_respose = True
+upcoming_link_response = True
 #current_date = str(date.today())
 #yesterday_datetime = datetime.strptime((datetime.now() - timedelta(1)).strftime('%Y-%m-%d 19:00:00'), '%Y-%m-%d %H:%M:%S')
 logging.debug("Getting links from Web Pages")
@@ -96,7 +96,7 @@ if linkRequest.status_code == 200: # if  status of url is 200 then it will proce
         totalCount = totalCountXpath_element.text
         logging.info(f'Number of Total Vehicles : {totalCount}')
                
-    while upcoming_link_respose: 
+    while upcoming_link_response: 
         if falseLinkCount < 10:
             if vehicleCount % 10 == 0:
                 falseLinkCount = 0 
