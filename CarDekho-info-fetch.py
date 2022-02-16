@@ -19,8 +19,8 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
 logging.debug("Selenium modules imported into program.")
 
-import requests
-logging.debug("Requests imported into program.")
+import requests, re
+logging.debug("Requests and re imported into program.")
 
 import time
 from datetime import date, datetime, timedelta
@@ -124,13 +124,13 @@ if linkRequest.status_code == 200: # if  status of url is 200 then it will proce
                 vehicleCount += 1
         else:
             logging.debug("False link count exceeds 10")
-            upcoming_link_respose = False
-            driver.close()
+            upcoming_link_response = False
 print(link_info_list)
 print(len(link_info_list))
 
 logging.debug("Getting Variants link from link list")
 logging.debug("Initializing driver for Variants")
+driver.close()
 modelDriver = webdriver.Chrome(
 executable_path = CHROMEDRIVER_PATH,
     chrome_options = chrome_options
@@ -157,9 +157,9 @@ for link in link_info_list:
             splitz = model_url.split('/')
             brand_name = splitz[-2].replace('_', ' ').replace('-', ' ').title()
             model_name = splitz[-1].replace('_', ' ').replace('-', ' ').title()
-            logging.info(f'Vehicle Name : {vehicleName}')
-            logging.info(f'Vehicle Name : {brand_name}')
-            logging.info(f'Vehicle Name : {model_name}')
+            if re.search(brand_name, model_name):
+                model_name = model_name.replace(brand_name, '').strip()
+            logging.info(f'Vehicle Name : {brand_name} , {model_name}')
 
         for tabNum in range(12):
             modelXpath = f'//*[@id="rf01"]/div[1]/div/nav/div[2]/div/ul/li[{tabNum}]/a'
@@ -175,7 +175,8 @@ for link in link_info_list:
                     variantLinkRequest = requests.get(modelVariant_link, headers=headers)
                     logging.debug(f"Status Code : {variantLinkRequest.status_code}")
                     if variantLinkRequest.status_code == 200:
-                        model_variant_link_list.append(modelVariant_link)
+                        vehicleInfoDict = {'brand' : brand_name, 'model' : model_name, 'variantlink' : modelVariant_link}
+                        model_variant_link_list.append(vehicleInfoDict)
                         logging.debug(f'Model Variant Link : {modelVariant_link}')                    
                 else:
                     continue
