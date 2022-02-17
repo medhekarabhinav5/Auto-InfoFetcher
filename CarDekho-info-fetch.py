@@ -2,7 +2,7 @@
 # Getting Car news from web
 # Decide website to be fetched from
 import logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 logging.debug("Start of Program.")
 
 import pathlib
@@ -19,8 +19,8 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
 logging.debug("Selenium modules imported into program.")
 
-import requests, re
-logging.debug("Requests and re imported into program.")
+import requests, re, os
+logging.debug("Requests, re and os imported into program.")
 
 import time
 from datetime import date, datetime, timedelta
@@ -74,14 +74,27 @@ LinkCollectionStatus = True
 falseLinkCount = 0
 vehicleCount = 1
 upcoming_link_response = True
-#current_date = str(date.today())
-#yesterday_datetime = datetime.strptime((datetime.now() - timedelta(1)).strftime('%Y-%m-%d 19:00:00'), '%Y-%m-%d %H:%M:%S')
 logging.debug("Getting links from Web Pages")
 
+currentDirectory = os.getcwd()
+parentDir = "India/CarDekho"
+currentWParent = os.path.join(currentDirectory, parentDir)
+logging.debug(f"Got Current working Directory {currentDirectory}")
+if os.path.isdir(currentWParent):
+    print("Exists")
+    logging.debug(f"Directory {currentWParent} exists")
+else:
+    os.makedirs(currentWParent)
+    logging.debug(f"{currentWParent} does not exists, Creting one")
 # # # # # # # # # # # # # # # # # # # # # #
 # Getting Vehicle list from page
 # # # # # # # # # # # # # # # # # # # # # # 
 url = f"https://www.cardekho.com/filter/new-cars"
+vehicleFileName = "vehicleList.txt"
+os.chdir(currentWParent)
+logging.debug(f"Changing current directory to {currentWParent}")
+vehicleList = open(vehicleFileName, "w")
+logging.debug(f"Creating file to write vehicle details, filename is {vehicleFileName}")
 headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
 logging.debug(f'Setting up url : {url}.')
 logging.debug(f"setting up header : {headers}")
@@ -119,7 +132,8 @@ if linkRequest.status_code == 200: # if  status of url is 200 then it will proce
                 link_element = driver.find_element_by_xpath(link_xpath)
                 link = link_element.get_attribute('href')
                 logging.info(f'Link from elements : {link}')
-                link_info_list.append(link)    
+                link_info_list.append(link) 
+                vehicleList.write(link + "\n")   
                 vehicleCount += 1
             else:
                 logging.debug(f'Responses to Link is not True. Link Response : {link_response}')
@@ -128,8 +142,8 @@ if linkRequest.status_code == 200: # if  status of url is 200 then it will proce
         else:
             logging.debug("False link count exceeds 10")
             upcoming_link_response = False
-print(link_info_list)
-print(len(link_info_list))
+
+vehicleList.close()
 
 
 # # # # # # # # # # # # # # # # # # # # # #
