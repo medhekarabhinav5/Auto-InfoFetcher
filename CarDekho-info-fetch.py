@@ -78,9 +78,6 @@ upcoming_link_response = True
 #yesterday_datetime = datetime.strptime((datetime.now() - timedelta(1)).strftime('%Y-%m-%d 19:00:00'), '%Y-%m-%d %H:%M:%S')
 logging.debug("Getting links from Web Pages")
 
-# # # # # # # # # # # # # # # # # # # # # #
-# Getting Vehicle list from page
-# # # # # # # # # # # # # # # # # # # # # # 
 url = f"https://www.cardekho.com/filter/new-cars"
 headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
 logging.debug(f'Setting up url : {url}.')
@@ -131,10 +128,6 @@ if linkRequest.status_code == 200: # if  status of url is 200 then it will proce
 print(link_info_list)
 print(len(link_info_list))
 
-
-# # # # # # # # # # # # # # # # # # # # # #
-#Getting variants Link list
-# # # # # # # # # # # # # # # # # # # # # #
 logging.debug("Getting Variants link from link list")
 logging.debug("Initializing driver for Variants")
 driver.close()
@@ -160,20 +153,15 @@ for link in link_info_list:
         vehicleName_response = check_exists_by_xpath(vehicleName_Xpath, modelDriver)
         if vehicleName_response:
             vehicleName_element = modelDriver.find_element_by_xpath(vehicleName_Xpath)
-            logging.debug(f"Checking Vehicle Xpath, got {vehicleName_element}")
             vehicleName = vehicleName_element.text
-            logging.debug(f"Vehicle Name is {vehicleName}")
             splitz = model_url.split('/')
-            logging.debug("Splitting URL to get Brand and Model")
             brand_name = splitz[-2].replace('_', ' ').replace('-', ' ').title()
             model_name = splitz[-1].replace('_', ' ').replace('-', ' ').title()
-            logging.debug(f"Checking whether Model Name Consists Brand name, Remove if Exists")
             if re.search(brand_name, model_name):
                 model_name = model_name.replace(brand_name, '').strip()
-                logging.debug(f"Got Brand Name {brand_name} in Model {model_name}")
             logging.info(f'Vehicle Name : {brand_name} , {model_name}')
 
-        for tabNum in range(15):
+        for tabNum in range(12):
             modelXpath = f'//*[@id="rf01"]/div[1]/div/nav/div[2]/div/ul/li[{tabNum}]/a'
             logging.debug(f"Model Xpath : {modelXpath}")
             modelXpath_response = check_exists_by_xpath(modelXpath, modelDriver)
@@ -197,18 +185,5 @@ for link in link_info_list:
 else:
     modelDriver.close()
 
-
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# Getting Internal List of variants for each Vehicle
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
-
-logging.debug("Initializing Chromedriver for Variant list fetching")
-variantDriver = webdriver.Chrome(
-    executable_path = CHROMEDRIVER_PATH,
-    chrome_options = chrome_options
-)
-
-for dict in model_variant_link_list:
-    logging.debug("Looping through Model Variant Link List")
-    print(dict['variantlink'])
-
+print(model_variant_link_list)
+print(len(model_variant_link_list))
