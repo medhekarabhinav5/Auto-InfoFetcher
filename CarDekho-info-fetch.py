@@ -64,7 +64,9 @@ def check_exists_by_xpath(xpath, xpathDriver): # Checking whether xpath is avail
         return False
     return True
     
-link_info_list = []
+#link_info_list = []
+vehicleFileName = "vehicleList.txt"
+vehicleFileNameUsed = "vehicleListUsed.txt"
 link_info_list_used = []
 model_variant_link_list = []
 model_variant_link_list_used = []
@@ -90,11 +92,13 @@ else:
 # Getting Vehicle list from page
 # # # # # # # # # # # # # # # # # # # # # # 
 url = f"https://www.cardekho.com/filter/new-cars"
-vehicleFileName = "vehicleList.txt"
+
 os.chdir(currentWParent)
 logging.debug(f"Changing current directory to {currentWParent}")
 vehicleList = open(vehicleFileName, "w")
 logging.debug(f"Creating file to write vehicle details, filename is {vehicleFileName}")
+open(vehicleFileNameUsed, "w").close()
+logging.debug(f"Creating file to append vehicle details, filename is {vehicleFileNameUsed}, for now closed.")
 headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
 logging.debug(f'Setting up url : {url}.')
 logging.debug(f"setting up header : {headers}")
@@ -120,10 +124,6 @@ if linkRequest.status_code == 200: # if  status of url is 200 then it will proce
                 driver.find_element_by_tag_name('body').send_keys(Keys.END)
                 time.sleep(4)
                 logging.debug('letting Thread sleep for 4 seconds, for better loading of page.')
-                """
-                            //*[@id="rf01"]/div[1]/div/main/div/div[1]/div[2]/div[1]/div[2]/section/div[1]/div[2]/h3/a
-                            //*[@id="rf01"]/div[1]/div/main/div/div[1]/div[2]/div[1]/div[3]/section/div[1]/div[2]/h3/a
-                """
             link_xpath = f'//*[@id="rf01"]/div[1]/div/main/div/div[1]/div[2]/div[1]/div[{str(vehicleCount)}]/section/div[1]/div[2]/h3/a'
             logging.debug(f'link Xpath : {link_xpath}.')
             link_response = check_exists_by_xpath(link_xpath, driver)
@@ -132,7 +132,7 @@ if linkRequest.status_code == 200: # if  status of url is 200 then it will proce
                 link_element = driver.find_element_by_xpath(link_xpath)
                 link = link_element.get_attribute('href')
                 logging.info(f'Link from elements : {link}')
-                link_info_list.append(link) 
+                #link_info_list.append(link) 
                 vehicleList.write(link + "\n")   
                 vehicleCount += 1
             else:
@@ -158,9 +158,12 @@ executable_path = CHROMEDRIVER_PATH,
 )
 logging.debug("Initializing ChromeDriver")
 
-for link in link_info_list:
+logging.debug(f"reading from file list {vehicleFileName} for processing.")
+vehicleList = open(vehicleFileName, 'r')
+vehicleListLines = vehicleList.readlines()
+
+for link in vehicleListLines:
     model_url = link
-    link_info_list_used.append(model_url)
     logging.debug(f'Setting up url for Model: {model_url}.')
     logging.debug(f"setting up header for Model: {headers}")
     modelLinkRequest = requests.get(model_url, headers=headers)
@@ -168,6 +171,9 @@ for link in link_info_list:
     logging.debug(f"checking whether url {model_url} exists")
     logging.debug(f"{modelLinkRequest.status_code}")
     if modelLinkRequest.status_code == 200: # if  status of url is 200 then it will proceed.
+        vehicleListUsed = open(vehicleFileNameUsed, 'a')
+        vehicleListUsed.write(model_url)
+        logging.debug(f"url {model_url} is appended into {vehicleFileNameUsed}")               
         logging.debug(f"Successfully get 200 status for link : {model_url}")
         modelDriver.get(model_url)
         vehicleName_Xpath = '//*[@id="overview"]/div/div/div[2]/h1'
@@ -209,7 +215,12 @@ for link in link_info_list:
         else:
             continue
 else:
+    vehicleList.close()
+    logging.debug(f"{vehicleFileName} is closed")
+    vehicleListUsed.close()
+    logging.debug(f"{vehicleFileNameUsed} is closed")
     modelDriver.close()
+    logging.debug("Model Driver is closed")
 
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
