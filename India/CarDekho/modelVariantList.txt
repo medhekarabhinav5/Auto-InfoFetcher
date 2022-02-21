@@ -1,0 +1,219 @@
+{'brand': 'Maruti', 'model': 'Baleno', 'variantlink': 'https://www.cardekho.com/maruti/baleno/variants.htm'}
+{'brand': 'Mahindra', 'model': 'Thar\n', 'variantlink': 'https://www.cardekho.com/mahindra/thar/variants.htm'}
+{'brand': 'Mahindra', 'model': 'Xuv700\n', 'variantlink': 'https://www.cardekho.com/mahindra/xuv700/variants.htm'}
+{'brand': 'Tata', 'model': 'Punch\n', 'variantlink': 'https://www.cardekho.com/tata/punch/variants.htm'}
+{'brand': 'Mahindra', 'model': 'Scorpio\n', 'variantlink': 'https://www.cardekho.com/mahindra/scorpio/variants.htm'}
+{'brand': 'Mahindra', 'model': 'Bolero\n', 'variantlink': 'https://www.cardekho.com/mahindra/bolero/variants.htm'}
+{'brand': 'Toyota', 'model': 'Fortuner', 'variantlink': 'https://www.cardekho.com/toyota/fortuner/variants.htm'}
+{'brand': 'Hyundai', 'model': 'Creta\n', 'variantlink': 'https://www.cardekho.com/hyundai/creta/variants.htm'}
+{'brand': 'Maruti', 'model': 'Swift\n', 'variantlink': 'https://www.cardekho.com/maruti/swift/variants.htm'}
+{'brand': 'Maruti', 'model': 'Ertiga', 'variantlink': 'https://www.cardekho.com/maruti/ertiga/variants.htm'}
+{'brand': 'Tata', 'model': 'Nexon\n', 'variantlink': 'https://www.cardekho.com/tata/nexon/variants.htm'}
+{'brand': 'Maruti', 'model': 'Vitara Brezza', 'variantlink': 'https://www.cardekho.com/maruti/vitara-brezza/variants.htm'}
+{'brand': 'Kia', 'model': 'Seltos\n', 'variantlink': 'https://www.cardekho.com/kia/seltos/variants.htm'}
+{'brand': 'Hyundai', 'model': 'Venue\n', 'variantlink': 'https://www.cardekho.com/hyundai/venue/variants.htm'}
+{'brand': 'Tata', 'model': 'Harrier\n', 'variantlink': 'https://www.cardekho.com/tata/harrier/variants.htm'}
+{'brand': 'Land Rover', 'model': 'Range Rover\n', 'variantlink': 'https://www.cardekho.com/land-rover/range-rover/variants.htm'}
+{'brand': 'Toyota', 'model': 'Innova Crysta\n', 'variantlink': 'https://www.cardekho.com/toyota/innova-crysta/variants.htm'}
+{'brand': 'Tata', 'model': 'Tiago', 'variantlink': 'https://www.cardekho.com/tata/tiago/variants.htm'}
+{'brand': 'Kia', 'model': 'Sonet\n', 'variantlink': 'https://www.cardekho.com/kia/sonet/variants.htm'}
+{'brand': 'Mahindra', 'model': 'Xuv300\n', 'variantlink': 'https://www.cardekho.com/mahindra/xuv300/variants.htm'}
+{'brand': 'Maruti', 'model': 'Swift Dzire\n', 'variantlink': 'https://www.cardekho.com/maruti/swift-dzire/variants.htm'}
+{'brand': 'Honda', 'model': 'City 2017 2020', 'variantlink': 'https://www.cardekho.com/honda/city-2017-2020/variants.htm'}
+{'brand': 'Hyundai', 'model': 'I20', 'variantlink': 'https://www.cardekho.com/hyundai/i20/variants.htm'}
+{'brand': 'Mg', 'model': 'Hector\n', 'variantlink': 'https://www.cardekho.com/mg/hector/variants.htm'}
+{'brand': 'Tata', 'model': 'Altroz\n', 'variantlink': 'https://www.cardekho.com/tata/altroz/variants.htm'}
+{'brand': 'Maruti', 'model': 'Wagon R', 'variantlink': 'https://www.cardekho.com/maruti/wagon-r/variants.htm'}
+{'brand': 'Hyundai', 'model': 'Verna\n', 'variantlink': 'https://www.cardekho.com/hyundai/verna/variants.htm'}
+{'brand': 'Nissan', 'model': 'Magnite\n', 'variantlink': 'https://www.cardekho.com/nissan/magnite/variants.htm'}
+{'brand': 'Maruti', 'model': 'Celerio', 'variantlink': 'https://www.cardekho.com/maruti/celerio/variants.htm'}
+{'brand': 'Honda', 'model': 'City', 'variantlink': 'https://www.cardekho.com/honda/city/variants.htm'}
+{'brand': 'Renault', 'model': 'Kwid', 'variantlink': 'https://www.cardekho.com/renault/kwid/variants.htm'}
+{'brand': 'Mg', 'model': 'Astor\n', 'variantlink': 'https://www.cardekho.com/mg/astor/variants.htm'}
+{'brand': 'Maruti', 'model': 'Alto 800', 'variantlink': 'https://www.cardekho.com/maruti/alto-800/variants.htm'}
+{'brand': 'Hyundai', 'model': 'Alcazar\n', 'variantlink': 'https://www.cardekho.com/hyundai/alcazar/variants.htm'}
+{'brand': 'Tata', 'model': 'Tigor\n', 'variantlink': 'https://www.cardekho.com/tata/tigor/variants.htm'}
+{'brand': 'Renault', 'model': 'Kiger\n', 'variantlink': 'https://www.cardekho.com/renault/kiger/variants.htm'}
+{'brand': 'Volkswagen', 'model': 'Polo\n', 'variantlink': 'https://www.cardekho.com/volkswagen/polo/variants.htm'}
+{'brand': 'Honda', 'model': 'Amaze\n', 'variantlink': 'https://www.cardekho.com/honda/amaze/variants.htm'}
+{'brand': 'Skoda', 'model': 'Kushaq\n', 'variantlink': 'https://www.cardekho.com/skoda/kushaq/variants.htm'}
+{'brand': 'Renault', 'model': 'Triber\n', 'variantlink': 'https://www.cardekho.com/renault/triber/variants.htm'}
+{'brand': 'Tata', 'model': 'New Safari', 'variantlink': 'https://www.cardekho.com/tata/new-safari/variants.htm'}
+{'brand': 'Hyundai', 'model': 'Aura\n', 'variantlink': 'https://www.cardekho.com/hyundai/aura/variants.htm'}
+{'brand': 'Jeep', 'model': 'Compass\n', 'variantlink': 'https://www.cardekho.com/jeep/compass/variants.htm'}
+{'brand': 'Maruti', 'model': 'Xl6\n', 'variantlink': 'https://www.cardekho.com/maruti/xl6/variants.htm'}
+{'brand': 'Maruti', 'model': 'S Presso\n', 'variantlink': 'https://www.cardekho.com/maruti/s-presso/variants.htm'}
+{'brand': 'Maruti', 'model': 'Sx4 S Cross', 'variantlink': 'https://www.cardekho.com/maruti/sx4-s-cross/variants.htm'}
+{'brand': 'Renault', 'model': 'Duster\n', 'variantlink': 'https://www.cardekho.com/renault/duster/variants.htm'}
+{'brand': 'Volkswagen', 'model': 'Taigun\n', 'variantlink': 'https://www.cardekho.com/volkswagen/taigun/variants.htm'}
+{'brand': 'Jeep', 'model': 'Wrangler\n', 'variantlink': 'https://www.cardekho.com/jeep/wrangler/variants.htm'}
+{'brand': 'Force', 'model': 'Gurkha', 'variantlink': 'https://www.cardekho.com/force/gurkha/variants.htm'}
+{'brand': 'Maruti', 'model': 'Ciaz', 'variantlink': 'https://www.cardekho.com/maruti/ciaz/variants.htm'}
+{'brand': 'Land Rover', 'model': 'Defender\n', 'variantlink': 'https://www.cardekho.com/land-rover/defender/variants.htm'}
+{'brand': 'Lamborghini', 'model': 'Urus\n', 'variantlink': 'https://www.cardekho.com/lamborghini/urus/variants.htm'}
+{'brand': 'Mercedes Benz', 'model': 'Gla', 'variantlink': 'https://www.cardekho.com/mercedes-benz/gla/variants.htm'}
+{'brand': 'Maruti', 'model': 'Ignis', 'variantlink': 'https://www.cardekho.com/maruti/ignis/variants.htm'}
+{'brand': 'Volvo', 'model': 'Xc 90\n', 'variantlink': 'https://www.cardekho.com/volvo/xc-90/variants.htm'}
+{'brand': 'Hyundai', 'model': 'Santro\n', 'variantlink': 'https://www.cardekho.com/hyundai/santro/variants.htm'}
+{'brand': 'Hyundai', 'model': 'Tucson\n', 'variantlink': 'https://www.cardekho.com/hyundai/tucson/variants.htm'}
+{'brand': 'Toyota', 'model': 'Camry\n', 'variantlink': 'https://www.cardekho.com/toyota/camry/variants.htm'}
+{'brand': 'Audi', 'model': 'Q7\n', 'variantlink': 'https://www.cardekho.com/audi/q7/variants.htm'}
+{'brand': 'Bmw', 'model': 'X3\n', 'variantlink': 'https://www.cardekho.com/bmw/x3/variants.htm'}
+{'brand': 'Volkswagen', 'model': 'Tiguan\n', 'variantlink': 'https://www.cardekho.com/volkswagen/tiguan/variants.htm'}
+{'brand': 'Maruti', 'model': 'Eeco', 'variantlink': 'https://www.cardekho.com/maruti/eeco/variants.htm'}
+{'brand': 'Mg', 'model': 'Gloster\n', 'variantlink': 'https://www.cardekho.com/mg/gloster/variants.htm'}
+{'brand': 'Bmw', 'model': 'X5', 'variantlink': 'https://www.cardekho.com/bmw/x5/variants.htm'}
+{'brand': 'Bmw', 'model': 'X1', 'variantlink': 'https://www.cardekho.com/bmw/x1/variants.htm'}
+{'brand': 'Bmw', 'model': 'X7\n', 'variantlink': 'https://www.cardekho.com/bmw/x7/variants.htm'}
+{'brand': 'Hyundai', 'model': 'Elantra', 'variantlink': 'https://www.cardekho.com/hyundai/elantra/variants.htm'}
+{'brand': 'Lamborghini', 'model': 'Aventador', 'variantlink': 'https://www.cardekho.com/lamborghini/aventador/variants.htm'}
+{'brand': 'Skoda', 'model': 'Kodiaq\n', 'variantlink': 'https://www.cardekho.com/skoda/kodiaq/variants.htm'}
+{'brand': 'Skoda', 'model': 'Rapid', 'variantlink': 'https://www.cardekho.com/skoda/rapid/variants.htm'}
+{'brand': 'Toyota', 'model': 'Vellfire\n', 'variantlink': 'https://www.cardekho.com/toyota/vellfire/variants.htm'}
+{'brand': 'Audi', 'model': 'A6', 'variantlink': 'https://www.cardekho.com/audi/a6/variants.htm'}
+{'brand': 'Toyota', 'model': 'Glanza\n', 'variantlink': 'https://www.cardekho.com/toyota/glanza/variants.htm'}
+{'brand': 'Skoda', 'model': 'Octavia\n', 'variantlink': 'https://www.cardekho.com/skoda/octavia/variants.htm'}
+{'brand': 'Audi', 'model': 'A4\n', 'variantlink': 'https://www.cardekho.com/audi/a4/variants.htm'}
+{'brand': 'Land Rover', 'model': 'Range Rover Velar\n', 'variantlink': 'https://www.cardekho.com/land-rover/range-rover-velar/variants.htm'}
+{'brand': 'Rolls Royce', 'model': 'Phantom', 'variantlink': 'https://www.cardekho.com/rolls-royce/phantom/variants.htm'}
+{'brand': 'Honda', 'model': 'Jazz\n', 'variantlink': 'https://www.cardekho.com/honda/jazz/variants.htm'}
+{'brand': 'Honda', 'model': 'Wr V\n', 'variantlink': 'https://www.cardekho.com/honda/wr-v/variants.htm'}
+{'brand': 'Nissan', 'model': 'Kicks\n', 'variantlink': 'https://www.cardekho.com/nissan/kicks/variants.htm'}
+{'brand': 'Mg', 'model': 'Zs Ev\n', 'variantlink': 'https://www.cardekho.com/mg/zs-ev/variants.htm'}
+{'brand': 'Mahindra', 'model': 'Marazzo\n', 'variantlink': 'https://www.cardekho.com/mahindra/marazzo/variants.htm'}
+{'brand': 'Rolls Royce', 'model': 'Ghost', 'variantlink': 'https://www.cardekho.com/rolls-royce/ghost/variants.htm'}
+{'brand': 'Mahindra', 'model': 'Alturas G4\n', 'variantlink': 'https://www.cardekho.com/mahindra/alturas-g4/variants.htm'}
+{'brand': 'Skoda', 'model': 'Superb\n', 'variantlink': 'https://www.cardekho.com/skoda/superb/variants.htm'}
+{'brand': 'Bmw', 'model': '3 Series', 'variantlink': 'https://www.cardekho.com/bmw/3-series/variants.htm'}
+{'brand': 'Land Rover', 'model': 'Range Rover Evoque\n', 'variantlink': 'https://www.cardekho.com/land-rover/range-rover-evoque/variants.htm'}
+{'brand': 'Volkswagen', 'model': 'Vento\n', 'variantlink': 'https://www.cardekho.com/volkswagen/vento/variants.htm'}
+{'brand': 'Audi', 'model': 'Q5\n', 'variantlink': 'https://www.cardekho.com/audi/q5/variants.htm'}
+{'brand': 'Mahindra', 'model': 'Kuv 100\n', 'variantlink': 'https://www.cardekho.com/mahindra/kuv-100/variants.htm'}
+{'brand': 'Hyundai', 'model': 'Kona\n', 'variantlink': 'https://www.cardekho.com/hyundai/kona/variants.htm'}
+{'brand': 'Bmw', 'model': '5 Series\n', 'variantlink': 'https://www.cardekho.com/bmw/5-series/variants.htm'}
+{'brand': 'Datsun', 'model': 'Redigo', 'variantlink': 'https://www.cardekho.com/datsun/redigo/variants.htm'}
+{'brand': 'Volvo', 'model': 'Xc40\n', 'variantlink': 'https://www.cardekho.com/volvo/xc40/variants.htm'}
+{'brand': 'Bmw', 'model': '2 Series\n', 'variantlink': 'https://www.cardekho.com/bmw/2-series/variants.htm'}
+{'brand': 'Volvo', 'model': 'Xc60', 'variantlink': 'https://www.cardekho.com/volvo/xc60/variants.htm'}
+{'brand': 'Mercedes Benz', 'model': 'E Class\n', 'variantlink': 'https://www.cardekho.com/mercedes-benz/e-class/variants.htm'}
+{'brand': 'Bmw', 'model': 'Z4\n', 'variantlink': 'https://www.cardekho.com/bmw/z4/variants.htm'}
+{'brand': 'Audi', 'model': 'A8\n', 'variantlink': 'https://www.cardekho.com/audi/a8/variants.htm'}
+{'brand': 'Porsche', 'model': 'Cayenne', 'variantlink': 'https://www.cardekho.com/porsche/cayenne/variants.htm'}
+{'brand': 'Datsun', 'model': 'Go', 'variantlink': 'https://www.cardekho.com/datsun/go/variants.htm'}
+{'brand': 'Datsun', 'model': 'Go Plus', 'variantlink': 'https://www.cardekho.com/datsun/go-plus/variants.htm'}
+{'brand': 'Land Rover', 'model': 'Range Rover Sport', 'variantlink': 'https://www.cardekho.com/land-rover/range-rover-sport/variants.htm'}
+{'brand': 'Volvo', 'model': 'S90\n', 'variantlink': 'https://www.cardekho.com/volvo/s90/variants.htm'}
+{'brand': 'Bmw', 'model': 'X6\n', 'variantlink': 'https://www.cardekho.com/bmw/x6/variants.htm'}
+{'brand': 'Bajaj', 'model': 'Re60\n', 'variantlink': 'https://www.cardekho.com/bajaj/re60/variants.htm'}
+{'brand': 'Audi', 'model': 'Q2\n', 'variantlink': 'https://www.cardekho.com/audi/q2/variants.htm'}
+{'brand': 'Audi', 'model': 'Rs7', 'variantlink': 'https://www.cardekho.com/audi/rs7/variants.htm'}
+{'brand': 'Land Rover', 'model': 'Discovery\n', 'variantlink': 'https://www.cardekho.com/land-rover/discovery/variants.htm'}
+{'brand': 'Hyundai', 'model': 'Grand I10 Nios\n', 'variantlink': 'https://www.cardekho.com/hyundai/grand-i10-nios/variants.htm'}
+{'brand': 'Ferrari', 'model': 'Roma\n', 'variantlink': 'https://www.cardekho.com/ferrari/roma/variants.htm'}
+{'brand': 'Volvo', 'model': 'S60\n', 'variantlink': 'https://www.cardekho.com/volvo/s60/variants.htm'}
+{'brand': 'Mercedes Benz', 'model': 'Glc\n', 'variantlink': 'https://www.cardekho.com/mercedes-benz/glc/variants.htm'}
+{'brand': 'Jaguar', 'model': 'Xe\n', 'variantlink': 'https://www.cardekho.com/jaguar/xe/variants.htm'}
+{'brand': 'Bmw', 'model': '7 Series', 'variantlink': 'https://www.cardekho.com/bmw/7-series/variants.htm'}
+{'brand': 'Bmw', 'model': 'X4\n', 'variantlink': 'https://www.cardekho.com/bmw/x4/variants.htm'}
+{'brand': 'Citroen', 'model': 'C5 Aircross\n', 'variantlink': 'https://www.cardekho.com/citroen/c5-aircross/variants.htm'}
+{'brand': 'Isuzu', 'model': 'D Max\n', 'variantlink': 'https://www.cardekho.com/isuzu/d-max/variants.htm'}
+{'brand': 'Porsche', 'model': 'Macan', 'variantlink': 'https://www.cardekho.com/porsche/macan/variants.htm'}
+{'brand': 'Jaguar', 'model': 'F Type\n', 'variantlink': 'https://www.cardekho.com/jaguar/f-type/variants.htm'}
+{'brand': 'Mercedes Benz', 'model': 'Gls\n', 'variantlink': 'https://www.cardekho.com/mercedes-benz/gls/variants.htm'}
+{'brand': 'Rolls Royce', 'model': 'Cullinan\n', 'variantlink': 'https://www.cardekho.com/rolls-royce/cullinan/variants.htm'}
+{'brand': 'Mercedes Benz', 'model': 'S Class\n', 'variantlink': 'https://www.cardekho.com/mercedes-benz/s-class/variants.htm'}
+{'brand': 'Jaguar', 'model': 'F Pace\n', 'variantlink': 'https://www.cardekho.com/jaguar/f-pace/variants.htm'}
+{'brand': 'Bmw', 'model': 'Ix\n', 'variantlink': 'https://www.cardekho.com/bmw/ix/variants.htm'}
+{'brand': 'Audi', 'model': 'E Tron\n', 'variantlink': 'https://www.cardekho.com/audi/e-tron/variants.htm'}
+{'brand': 'Jaguar', 'model': 'I Pace\n', 'variantlink': 'https://www.cardekho.com/jaguar/i-pace/variants.htm'}
+{'brand': 'Mercedes Benz', 'model': 'Amg G 63\n', 'variantlink': 'https://www.cardekho.com/mercedes-benz/amg-g-63/variants.htm'}
+{'brand': 'Bmw', 'model': '6 Series', 'variantlink': 'https://www.cardekho.com/bmw/6-series/variants.htm'}
+{'brand': 'Tata', 'model': 'Tiago Nrg\n', 'variantlink': 'https://www.cardekho.com/tata/tiago-nrg/variants.htm'}
+{'brand': 'Ferrari', 'model': 'Portofino\n', 'variantlink': 'https://www.cardekho.com/ferrari/portofino/variants.htm'}
+{'brand': 'Jaguar', 'model': 'Xf\n', 'variantlink': 'https://www.cardekho.com/jaguar/xf/variants.htm'}
+{'brand': 'Lexus', 'model': 'Es\n', 'variantlink': 'https://www.cardekho.com/lexus/es/variants.htm'}
+{'brand': 'Lexus', 'model': 'Ls\n', 'variantlink': 'https://www.cardekho.com/lexus/ls/variants.htm'}
+{'brand': 'Bentley', 'model': 'Flying Spur', 'variantlink': 'https://www.cardekho.com/bentley/flying-spur/variants.htm'}
+{'brand': 'Byd', 'model': 'E6\n', 'variantlink': 'https://www.cardekho.com/byd/e6/variants.htm'}
+{'brand': 'Maserati', 'model': 'Levante\n', 'variantlink': 'https://www.cardekho.com/maserati/levante/variants.htm'}
+{'brand': 'Isuzu', 'model': 'Mu X\n', 'variantlink': 'https://www.cardekho.com/isuzu/mu-x/variants.htm'}
+{'brand': 'Bmw', 'model': 'M5\n', 'variantlink': 'https://www.cardekho.com/bmw/m5/variants.htm'}
+{'brand': 'Mercedes Benz', 'model': 'V Class\n', 'variantlink': 'https://www.cardekho.com/mercedes-benz/v-class/variants.htm'}
+{'brand': 'Audi', 'model': 'Q8\n', 'variantlink': 'https://www.cardekho.com/audi/q8/variants.htm'}
+{'brand': 'Porsche', 'model': '718\n', 'variantlink': 'https://www.cardekho.com/porsche/718/variants.htm'}
+{'brand': 'Porsche', 'model': '911', 'variantlink': 'https://www.cardekho.com/porsche/911/variants.htm'}
+{'brand': 'Mercedes Benz', 'model': 'A Class Limousine\n', 'variantlink': 'https://www.cardekho.com/mercedes-benz/a-class-limousine/variants.htm'}
+{'brand': 'Porsche', 'model': 'Taycan\n', 'variantlink': 'https://www.cardekho.com/porsche/taycan/variants.htm'}
+{'brand': 'Aston Martin', 'model': 'Dbx\n', 'variantlink': 'https://www.cardekho.com/aston-martin/dbx/variants.htm'}
+{'brand': 'Mini', 'model': 'Cooper Convertible', 'variantlink': 'https://www.cardekho.com/mini/cooper-convertible/variants.htm'}
+{'brand': 'Land Rover', 'model': 'Discovery Sport', 'variantlink': 'https://www.cardekho.com/land-rover/discovery-sport/variants.htm'}
+{'brand': 'Strom Motors', 'model': 'R3\n', 'variantlink': 'https://www.cardekho.com/strom-motors/r3/variants.htm'}
+{'brand': 'Mercedes Benz', 'model': 'Amg Gt', 'variantlink': 'https://www.cardekho.com/mercedes-benz/amg-gt/variants.htm'}
+{'brand': 'Lexus', 'model': 'Nx\n', 'variantlink': 'https://www.cardekho.com/lexus/nx/variants.htm'}
+{'brand': 'Porsche', 'model': 'Panamera\n', 'variantlink': 'https://www.cardekho.com/porsche/panamera/variants.htm'}
+{'brand': 'Bentley', 'model': 'Continental', 'variantlink': 'https://www.cardekho.com/bentley/continental/variants.htm'}
+{'brand': 'Maserati', 'model': 'Quattroporte', 'variantlink': 'https://www.cardekho.com/maserati/quattroporte/variants.htm'}
+{'brand': 'Tata', 'model': 'Yodha Pickup\n', 'variantlink': 'https://www.cardekho.com/tata/yodha-pickup/variants.htm'}
+{'brand': 'Hyundai', 'model': 'Xcent Prime', 'variantlink': 'https://www.cardekho.com/hyundai/xcent-prime/variants.htm'}
+{'brand': 'Lexus', 'model': 'Lx\n', 'variantlink': 'https://www.cardekho.com/lexus/lx/variants.htm'}
+{'brand': 'Rolls Royce', 'model': 'Wraith', 'variantlink': 'https://www.cardekho.com/rolls-royce/wraith/variants.htm'}
+{'brand': 'Aston Martin', 'model': 'Vantage', 'variantlink': 'https://www.cardekho.com/aston-martin/vantage/variants.htm'}
+{'brand': 'Maserati', 'model': 'Ghibli\n', 'variantlink': 'https://www.cardekho.com/maserati/ghibli/variants.htm'}
+{'brand': 'Mahindra', 'model': 'E Verito\n', 'variantlink': 'https://www.cardekho.com/mahindra/e-verito/variants.htm'}
+{'brand': 'Bentley', 'model': 'Bentayga\n', 'variantlink': 'https://www.cardekho.com/bentley/bentayga/variants.htm'}
+{'brand': 'Aston Martin', 'model': 'Db11\n', 'variantlink': 'https://www.cardekho.com/aston-martin/db11/variants.htm'}
+{'brand': 'Mercedes Benz', 'model': 'G Class', 'variantlink': 'https://www.cardekho.com/mercedes-benz/g-class/variants.htm'}
+{'brand': 'Nissan', 'model': 'Gtr\n', 'variantlink': 'https://www.cardekho.com/nissan/gtr/variants.htm'}
+{'brand': 'Lamborghini', 'model': 'Huracan Evo\n', 'variantlink': 'https://www.cardekho.com/lamborghini/huracan-evo/variants.htm'}
+{'brand': 'Lexus', 'model': 'Rx\n', 'variantlink': 'https://www.cardekho.com/lexus/rx/variants.htm'}
+{'brand': 'Mercedes Benz', 'model': 'Gle\n', 'variantlink': 'https://www.cardekho.com/mercedes-benz/gle/variants.htm'}
+{'brand': 'Bmw', 'model': 'M2\n', 'variantlink': 'https://www.cardekho.com/bmw/m2/variants.htm'}
+{'brand': 'Ferrari', 'model': '812\n', 'variantlink': 'https://www.cardekho.com/ferrari/812/variants.htm'}
+{'brand': 'Ferrari', 'model': 'Sf90 Stradale\n', 'variantlink': 'https://www.cardekho.com/ferrari/sf90-stradale/variants.htm'}
+{'brand': 'Ferrari', 'model': 'F8 Tributo\n', 'variantlink': 'https://www.cardekho.com/ferrari/f8-tributo/variants.htm'}
+{'brand': 'Maserati', 'model': 'Gran Turismo', 'variantlink': 'https://www.cardekho.com/maserati/gran-turismo/variants.htm'}
+{'brand': 'Bmw', 'model': '8 Series\n', 'variantlink': 'https://www.cardekho.com/bmw/8-series/variants.htm'}
+{'brand': 'Mercedes Benz', 'model': 'Amg Gle 63 S\n', 'variantlink': 'https://www.cardekho.com/mercedes-benz/amg-gle-63-s/variants.htm'}
+{'brand': 'Mini', 'model': 'Cooper Countryman\n', 'variantlink': 'https://www.cardekho.com/mini/cooper-countryman/variants.htm'}
+{'brand': 'Bmw', 'model': 'M4 Competition\n', 'variantlink': 'https://www.cardekho.com/bmw/m4-competition/variants.htm'}
+{'brand': 'Mercedes Benz', 'model': 'Amg Gle 53\n', 'variantlink': 'https://www.cardekho.com/mercedes-benz/amg-gle-53/variants.htm'}
+{'brand': 'Lexus', 'model': 'Lc 500H\n', 'variantlink': 'https://www.cardekho.com/lexus/lc-500h/variants.htm'}
+{'brand': 'Mercedes Benz', 'model': 'Eqc\n', 'variantlink': 'https://www.cardekho.com/mercedes-benz/eqc/variants.htm'}
+{'brand': 'Maserati', 'model': 'Gran Cabrio', 'variantlink': 'https://www.cardekho.com/maserati/gran-cabrio/variants.htm'}
+{'brand': 'Mercedes Benz', 'model': 'New C Class', 'variantlink': 'https://www.cardekho.com/mercedes-benz/new-c-class/variants.htm'}
+{'brand': 'Rolls Royce', 'model': 'Dawn\n', 'variantlink': 'https://www.cardekho.com/rolls-royce/dawn/variants.htm'}
+{'brand': 'Mini', 'model': '3 Door', 'variantlink': 'https://www.cardekho.com/mini/3-door/variants.htm'}
+{'brand': 'Mercedes Benz', 'model': 'Cls Class', 'variantlink': 'https://www.cardekho.com/mercedes-benz/cls-class/variants.htm'}
+{'brand': 'Mahindra', 'model': 'Bolero Pik Up Extra Long\n', 'variantlink': 'https://www.cardekho.com/mahindra/bolero-pik-up-extra-long/variants.htm'}
+{'brand': 'Mercedes Benz', 'model': 'Amg Glc 43\n', 'variantlink': 'https://www.cardekho.com/mercedes-benz/amg-glc-43/variants.htm'}
+{'brand': 'Bmw', 'model': 'X5 M\n', 'variantlink': 'https://www.cardekho.com/bmw/x5-m/variants.htm'}
+{'brand': 'Mahindra', 'model': 'Bolero Camper\n', 'variantlink': 'https://www.cardekho.com/mahindra/bolero-camper/variants.htm'}
+{'brand': 'Porsche', 'model': 'Cayenne Coupe\n', 'variantlink': 'https://www.cardekho.com/porsche/cayenne-coupe/variants.htm'}
+{'brand': 'Mini', 'model': 'John Cooper Works\n', 'variantlink': 'https://www.cardekho.com/mini/john-cooper-works/variants.htm'}
+{'brand': 'Tata', 'model': 'Tigor Ev\n', 'variantlink': 'https://www.cardekho.com/tata/tigor-ev/variants.htm'}
+{'brand': 'Ford', 'model': 'Ecosport', 'variantlink': 'https://www.cardekho.com/ford/ecosport/variants.htm'}
+{'brand': 'Bmw', 'model': '3 Series Gran Limousine\n', 'variantlink': 'https://www.cardekho.com/bmw/3-series-gran-limousine/variants.htm'}
+{'brand': 'Mahindra', 'model': 'Bolero Pik Up Extra Strong\n', 'variantlink': 'https://www.cardekho.com/mahindra/bolero-pik-up-extra-strong/variants.htm'}
+{'brand': 'Kia', 'model': 'Carens\n', 'variantlink': 'https://www.cardekho.com/kia/carens/variants.htm'}
+{'brand': 'Audi', 'model': 'Rs Q8\n', 'variantlink': 'https://www.cardekho.com/audi/rs-q8/variants.htm'}
+{'brand': 'Mahindra', 'model': 'Bolero Maxi Truck Plus\n', 'variantlink': 'https://www.cardekho.com/mahindra/bolero-maxi-truck-plus/variants.htm'}
+{'brand': 'Toyota', 'model': 'Urban Cruiser\n', 'variantlink': 'https://www.cardekho.com/toyota/urban-cruiser/variants.htm'}
+{'brand': 'Mercedes Benz', 'model': 'Amg A 45 S\n', 'variantlink': 'https://www.cardekho.com/mercedes-benz/amg-a-45-s/variants.htm'}
+{'brand': 'Kia', 'model': 'Carnival\n', 'variantlink': 'https://www.cardekho.com/kia/carnival/variants.htm'}
+{'brand': 'Mercedes Benz', 'model': 'Amg E 63\n', 'variantlink': 'https://www.cardekho.com/mercedes-benz/amg-e-63/variants.htm'}
+{'brand': 'Bmw', 'model': 'X5 M\n', 'variantlink': 'https://www.cardekho.com/bmw/x5-m/variants.htm'}
+{'brand': 'Audi', 'model': 'Rs E Tron Gt\n', 'variantlink': 'https://www.cardekho.com/audi/rs-e-tron-gt/variants.htm'}
+{'brand': 'Mahindra', 'model': 'Bolero Neo\n', 'variantlink': 'https://www.cardekho.com/mahindra/bolero-neo/variants.htm'}
+{'brand': 'Mercedes Benz', 'model': 'Amg Glc 43\n', 'variantlink': 'https://www.cardekho.com/mercedes-benz/amg-glc-43/variants.htm'}
+{'brand': 'Mercedes Benz', 'model': 'Amg E 53\n', 'variantlink': 'https://www.cardekho.com/mercedes-benz/amg-e-53/variants.htm'}
+{'brand': 'Tata', 'model': 'Nexon Ev\n', 'variantlink': 'https://www.cardekho.com/tata/nexon-ev/variants.htm'}
+{'brand': 'Mercedes Benz', 'model': 'Amg C 63\n', 'variantlink': 'https://www.cardekho.com/mercedes-benz/amg-c-63/variants.htm'}
+{'brand': 'Mercedes Benz', 'model': 'Amg Gla 35\n', 'variantlink': 'https://www.cardekho.com/mercedes-benz/amg-gla-35/variants.htm'}
+{'brand': 'Audi', 'model': 'E Tron Gt\n', 'variantlink': 'https://www.cardekho.com/audi/e-tron-gt/variants.htm'}
+{'brand': 'Mahindra', 'model': 'Bolero Camper\n', 'variantlink': 'https://www.cardekho.com/mahindra/bolero-camper/variants.htm'}
+{'brand': 'Bmw', 'model': 'X3 M', 'variantlink': 'https://www.cardekho.com/bmw/x3-m/variants.htm'}
+{'brand': 'Mercedes Benz', 'model': 'Amg C 43\n', 'variantlink': 'https://www.cardekho.com/mercedes-benz/amg-c-43/variants.htm'}
+{'brand': 'Mg', 'model': 'Hector Plus\n', 'variantlink': 'https://www.cardekho.com/mg/hector-plus/variants.htm'}
+{'brand': 'Mercedes Benz', 'model': 'Amg Gt 4 Door Coupe\n', 'variantlink': 'https://www.cardekho.com/mercedes-benz/amg-gt-4-door-coupe/variants.htm'}
+{'brand': 'Audi', 'model': 'S5 Sportback\n', 'variantlink': 'https://www.cardekho.com/audi/s5-sportback/variants.htm'}
+{'brand': 'Mercedes Benz', 'model': 'Amg A 35\n', 'variantlink': 'https://www.cardekho.com/mercedes-benz/amg-a-35/variants.htm'}

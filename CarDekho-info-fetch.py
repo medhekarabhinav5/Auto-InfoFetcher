@@ -67,10 +67,8 @@ def check_exists_by_xpath(xpath, xpathDriver): # Checking whether xpath is avail
 #link_info_list = []
 vehicleFileName = "vehicleList.txt"
 vehicleFileNameUsed = "vehicleListUsed.txt"
-link_info_list_used = []
-model_variant_link_list = []
-model_variant_link_list_used = []
-users_list = []
+modelVariantLinksFileName = "modelVariantList.txt"
+modelVariantLinksUsedFileName = "modelVariantListUsed.txt"
 logging.debug('News List generated.')
 LinkCollectionStatus = True
 falseLinkCount = 0
@@ -99,6 +97,11 @@ vehicleList = open(vehicleFileName, "w")
 logging.debug(f"Creating file to write vehicle details, filename is {vehicleFileName}")
 open(vehicleFileNameUsed, "w").close()
 logging.debug(f"Creating file to append vehicle details, filename is {vehicleFileNameUsed}, for now closed.")
+open(modelVariantLinksFileName, "w").close()
+logging.debug(f"Creating file to append vehicle variants details, filename is {modelVariantLinksFileName}, for now closed.")
+open(modelVariantLinksUsedFileName, "w").close()
+logging.debug(f"Creating file to append used vehicle variants details, filename is {modelVariantLinksUsedFileName}, for now closed.")
+
 headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
 logging.debug(f'Setting up url : {url}.')
 logging.debug(f"setting up header : {headers}")
@@ -173,7 +176,9 @@ for link in vehicleListLines:
     if modelLinkRequest.status_code == 200: # if  status of url is 200 then it will proceed.
         vehicleListUsed = open(vehicleFileNameUsed, 'a')
         vehicleListUsed.write(model_url)
-        logging.debug(f"url {model_url} is appended into {vehicleFileNameUsed}")               
+        logging.debug(f"url {model_url} is appended into {vehicleFileNameUsed}")
+        vehicleListUsed.close()
+        logging.debug(f"{vehicleFileNameUsed} is closed")               
         logging.debug(f"Successfully get 200 status for link : {model_url}")
         modelDriver.get(model_url)
         vehicleName_Xpath = '//*[@id="overview"]/div/div/div[2]/h1'
@@ -208,7 +213,11 @@ for link in vehicleListLines:
                     logging.debug(f"Status Code : {variantLinkRequest.status_code}")
                     if variantLinkRequest.status_code == 200:
                         vehicleInfoDict = {'brand' : brand_name, 'model' : model_name, 'variantlink' : modelVariant_link}
-                        model_variant_link_list.append(vehicleInfoDict)
+                        modelVariantfile = open(modelVariantLinksFileName,'a')
+                        logging.debug(f"{modelVariantLinksFileName} is opened to add record {vehicleInfoDict}")
+                        modelVariantfile.write(f"{vehicleInfoDict}\n")
+                        modelVariantfile.close()
+                        logging.debug(f"{modelVariantLinksFileName} is closed now.")
                         logging.debug(f'Model Variant Link : {modelVariant_link}')                    
                 else:
                     continue
@@ -217,8 +226,6 @@ for link in vehicleListLines:
 else:
     vehicleList.close()
     logging.debug(f"{vehicleFileName} is closed")
-    vehicleListUsed.close()
-    logging.debug(f"{vehicleFileNameUsed} is closed")
     modelDriver.close()
     logging.debug("Model Driver is closed")
 
@@ -232,8 +239,3 @@ variantDriver = webdriver.Chrome(
     executable_path = CHROMEDRIVER_PATH,
     chrome_options = chrome_options
 )
-
-for dict in model_variant_link_list:
-    logging.debug("Looping through Model Variant Link List")
-    print(dict['variantlink'])
-
